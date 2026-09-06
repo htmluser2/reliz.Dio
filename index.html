@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Одяг із характером. Колекція P. Poroshenko.">
+    <title>P. Poroshenko | Одяг із характером</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="#top" aria-label="P. Poroshenko, на головну">P. <span>POROSHENKO</span></a>
+        <nav class="main-nav" aria-label="Головна навігація">
+            <a href="#collection">Колекція</a>
+            <a href="#story">Маніфест</a>
+        </nav>
+        <button class="bag-button" id="bag-button" type="button" aria-label="Відкрити кошик">Сумка <b id="bag-count">0</b></button>
+    </header>
+    <main id="top">
+        <section class="hero container">
+            <div class="hero-copy">
+                <p class="eyebrow">КОЛЕКЦІЯ 01 / 2026</p>
+                <h1>Одяг із<br><em>характером.</em></h1>
+                <p class="subtitle">Хто хоче бути в deepstate - вам до нас!</p>
+                <a class="hero-link" href="#collection">Дивитися колекцію <span>↘</span></a>
+            </div>
+            <div class="hero-image" aria-label="Модель у чорному одязі"></div>
+            <div class="hero-stamp">PP<br><span>EST. 2014</span></div>
+        </section>
+
+        <section class="collection container" id="collection">
+            <div class="section-heading">
+                <div><p class="eyebrow">ВИБРАНЕ</p><h2>Нова форма</h2></div>
+                <p class="section-note">06 речей<br>поза сезоном</p>
+            </div>
+            <div class="filters" aria-label="Фільтр колекції">
+                <button class="filter-button active" data-filter="all" type="button">Усе</button>
+                <button class="filter-button" data-filter="верх" type="button">Верх</button>
+                <button class="filter-button" data-filter="низ" type="button">Низ</button>
+                <button class="filter-button" data-filter="аксесуари" type="button">Аксесуари</button>
+            </div>
+            <div id="products" class="products-grid" aria-live="polite"></div>
+        </section>
+
+        <section class="manifest container" id="story">
+            <p class="eyebrow">МАНІФЕСТ</p>
+            <h2>Менше шуму.<br><em>Більше змісту.</em></h2>
+            <p>– Мені гріх скаржитися на брак критики в пресі, але ніхто не критикує мене більше, ніж я сам, коли наодинці з собою.</p>
+            <figure class="founder-photo">
+                <img src="https://promopuff.com.ua/catalog/wp-content/uploads/2025/11/pled-petro-poroshenko.-mirnogo-rishennya-ne-bude1.jpg" alt="Петро Порошенко" loading="lazy">
+                <figcaption>Петро Порошенко / засновник концепції<br><span>Фото: потужне</span></figcaption>
+            </figure>
+        </section>
+
+        <section class="editorial container" aria-label="Атмосфера колекції">
+            <div class="editorial-image"></div>
+            <div class="editorial-copy"><p class="eyebrow">ДЕТАЛІ МАЮТЬ ЗНАЧЕННЯ</p><p>Форма починається з постави. Решта — правильна тканина, точна лінія і трохи сміливості.</p></div>
+        </section>
+    </main>
+    <div id="cart-backdrop" class="cart-backdrop"></div>
+    <aside id="cart" class="cart" aria-label="Кошик" aria-hidden="true">
+        <div class="cart-heading"><div><p class="eyebrow">ВАША ПОКУПКА</p><h2>Сумка</h2></div><button id="close-cart" class="close-button" type="button" aria-label="Закрити кошик">×</button></div>
+        <div id="cart-items" class="cart-items"></div>
+        <div class="cart-footer"><div><span>Разом</span><strong id="cart-total">0 грн</strong></div><button id="checkout-button" class="checkout-button" type="button">Оформити замовлення <span>↗</span></button></div>
+    </aside>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <script src="script.js"></script>
+</body>
+</html>
