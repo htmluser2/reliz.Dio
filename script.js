@@ -1,10 +1,10 @@
 const products = [
-	{ name: 'Пальто «плащ»', price: '12 800 грн', category: 'верх', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfYT8bQDdWt3ZsOx1OeA0tGnQbtuDYGPiWyopehZrfHTZKyWJzg9lrPL0&s=10' },
-	{ name: 'Куртка «Потужна»', price: '8 400 грн', category: 'верх', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTBacPqs90s9ZTvA7k7UOWGpI8nffrEwwud4J4sDusU8HCJAHeRnpWxUU&s=10' },
-	{ name: 'шорти «потужні»', price: '4 900 грн', category: 'низ', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSs2XdcqB-aY-I9QWE5tb-XsRJcbf2vMTOQ-kugKVXokQ&s' },
-	{ name: 'Сорочка «патріотична»', price: '6 700 грн', category: 'верх', image: 'https://content.rozetka.com.ua/goods/images/big/419694200.png' },
-	{ name: 'Кепка «P-отужно»', price: '3 200 грн', category: 'аксесуари', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYA9NFWdCA7pee0asnheC6TH77kG7KwJq2Tv_PCHW_dQ&s' },
-	{ name: 'шедевро рюкзак «ex-pp»', price: '2 800 грн', category: 'аксесуари', image: 'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=900&q=85' }
+	{ name: 'труси «потужний аргумент»', price: '3000 грн', category: 'верх', image: 'https://nusho.com.ua/photos/elem/f/20230205_145717_%D0%BF%D0%BE%D1%82%D1%83%D0%B6%D0%BD%D0%B8%D0%B9%20%D0%B0%D1%80%D0%B3%D1%83%D0%BC%D0%B5%D0%BD%D1%82.jpg' },
+	{ name: 'футболка «молодіжна»', price: '8 400 грн', category: 'верх', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNeQ5qbwPFlQ8xCed-N_2P4UA0F1d7a5h6PymBInaGxWwmQF_SrGRkqg0p&s=10' },
+	{ name: 'Штани «рошенська»', price: '4 900 грн', category: 'низ', image: 'https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?auto=format&fit=crop&w=900&q=85' },
+	{ name: 'Сорочка «Маніфест»', price: '3 600 грн', category: 'верх', image: 'https://images.unsplash.com/photo-1603252110481-7ba873bf42ab?auto=format&fit=crop&w=900&q=85' },
+	{ name: 'Кепка «P-отужно»', price: '1 200 грн', category: 'аксесуари', image: 'https://images.unsplash.com/photo-1521369909029-2afed882baee?auto=format&fit=crop&w=900&q=85' },
+	{ name: 'Ремінь «ex-pp»', price: '1 800 грн', category: 'аксесуари', image: 'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=900&q=85' }
 ];
 
 const productsContainer = document.querySelector('#products');
@@ -48,6 +48,17 @@ function renderCart() {
 	cartItemsContainer.innerHTML = cartItems.length ? cartItems.map((item, index) => `
 		<div class="cart-item"><img src="${item.product.image}" alt="${item.product.name}"><div class="cart-item-info"><h3>${item.product.name}</h3><p>${item.product.price} · ${item.quantity} шт.</p><button class="remove-item" data-index="${index}" type="button">Видалити</button></div></div>`).join('') : '<p class="empty-cart">Ваша сумка порожня.<br>Оберіть річ із колекції.</p>';
 }
+
+const revealObserver = new IntersectionObserver((entries) => {
+	entries.forEach((entry) => {
+		if (entry.isIntersecting) {
+			entry.target.classList.add('is-visible');
+			revealObserver.unobserve(entry.target);
+		}
+	});
+}, { threshold: 0.2 });
+
+document.querySelectorAll('.reveal').forEach((element) => revealObserver.observe(element));
 
 function openCart() {
 	cart.classList.add('open');
