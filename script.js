@@ -1,10 +1,19 @@
 const products = [
-	{ name: 'труси «потужний аргумент»', price: '3000 грн', category: 'верх', image: 'https://nusho.com.ua/photos/elem/f/20230205_145717_%D0%BF%D0%BE%D1%82%D1%83%D0%B6%D0%BD%D0%B8%D0%B9%20%D0%B0%D1%80%D0%B3%D1%83%D0%BC%D0%B5%D0%BD%D1%82.jpg' },
-	{ name: 'футболка «молодіжна»', price: '8 400 грн', category: 'верх', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNeQ5qbwPFlQ8xCed-N_2P4UA0F1d7a5h6PymBInaGxWwmQF_SrGRkqg0p&s=10' },
-	{ name: 'Штани «рошенська»', price: '4 900 грн', category: 'низ', image: 'https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?auto=format&fit=crop&w=900&q=85' },
+	{ name: 'Футболка «потужність»', price: '8 400 грн', category: 'верх', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRj6XPgi57Tj4YTCNuAv1hbxF5Qayyb2oK4c7GFSRQ2-kDo_BoKHKkRjEg&s=10' },
 	{ name: 'Сорочка «Маніфест»', price: '3 600 грн', category: 'верх', image: 'https://images.unsplash.com/photo-1603252110481-7ba873bf42ab?auto=format&fit=crop&w=900&q=85' },
-	{ name: 'Кепка «P-отужно»', price: '1 200 грн', category: 'аксесуари', image: 'https://images.unsplash.com/photo-1521369909029-2afed882baee?auto=format&fit=crop&w=900&q=85' },
-	{ name: 'Ремінь «ex-pp»', price: '1 800 грн', category: 'аксесуари', image: 'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=900&q=85' }
+	{ name: 'Поло «Ознака»', price: '6 100 грн', category: 'верх', image: 'https://images.unsplash.com/photo-1504593811423-6dd665756598?auto=format&fit=crop&w=900&q=85' },
+	{ name: 'Светр «Порядок»', price: '9 600 грн', category: 'верх', image: 'https://s.estro.ua/static/content/thumbs/*x*/7/a3/xzu7fg-bcbe4d6e0bf7a9d66ef303dc6409ba37.jpg' },
+	{ name: 'Куртка «Профіль»', price: '14 800 грн', category: 'верх', image: 'https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=85' },
+	{ name: 'Піджака «Лінія»', price: '12 300 грн', category: 'верх', image: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=900&q=85' },
+	{ name: 'Тренч «Лінія»', price: '16 900 грн', category: 'верх', image: 'https://tales.ua/upload/iblock/23e/e1jq1q7j931nm65v0tfe1appk6a8iva4.jpg' },
+	{ name: 'Жилет «Сигнал»', price: '5 600 грн', category: 'верх', image: 'https://static.staff-clothes.com/uploads/media/image_product/0001/79/acaa42849c234f41af7a2a05db7e5a4f.jpeg' },
+	{ name: 'Джинси «Компас»', price: '4 900 грн', category: 'низ', image: 'https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=900&q=85' },
+	{ name: 'Штани «Силует»', price: '5 300 грн', category: 'низ', image: 'https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?auto=format&fit=crop&w=900&q=85' },
+	{ name: 'Класичні брюки «Стандарт»', price: '5 900 грн', category: 'низ', image: 'https://images.unsplash.com/photo-1542272604-787c3835535d?auto=format&fit=crop&w=900&q=85' },
+	{ name: 'Кросівки «Пульс»', price: '7 200 грн', category: 'низ', image: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=900&q=85' },
+	{ name: 'Кепка «P-01»', price: '1 200 грн', category: 'аксесуари', image: 'https://images.unsplash.com/photo-1521369909029-2afed882baee?auto=format&fit=crop&w=900&q=85' },
+	{ name: 'Ремінь «EPP»', price: '1 800 грн', category: 'аксесуари', image: 'https://content1.rozetka.com.ua/goods/images/big/252120569.png' },
+	{ name: 'Рюкзак «Старт»', price: '3 900 грн', category: 'аксесуари', image: 'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=900&q=85' }
 ];
 
 const productsContainer = document.querySelector('#products');
